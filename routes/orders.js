@@ -19,8 +19,7 @@ module.exports = [
                           goods_id: Joi.number().integer(),
                           count: Joi.number().integer(),
                         })
-                    )
-                    
+                    ),
                 }
             }
         }
@@ -36,7 +35,10 @@ module.exports = [
             description: '支付某订单',
             validate: {
                 params: {
-                    orderId: Joi.string().required()
+                    orderId: Joi.number().max(10).required().error((errors)=> {
+                        console.log(errors)
+                        return errors;
+                    })
                 }
             }
         }
