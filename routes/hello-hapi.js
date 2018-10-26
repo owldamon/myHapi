@@ -1,3 +1,5 @@
+const { jwtHeaderDefine } = require('../utils/router-helper');
+
 module.exports = [
     {
         method: 'GET',
@@ -8,6 +10,9 @@ module.exports = [
         config: {
             tags: ['api', 'tests'],
             description: '测试hello-hapi',
+            validate: {
+                ...jwtHeaderDefine
+            }
         }
     }
 ]

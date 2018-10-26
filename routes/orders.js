@@ -1,3 +1,5 @@
+const { jwtHeaderDefine } = require('../utils/router-helper');
+
 const Joi = require('joi');
 
 const GROUP_NAME = 'orders';
@@ -20,7 +22,8 @@ module.exports = [
                           count: Joi.number().integer(),
                         })
                     ),
-                }
+                },
+                ...jwtHeaderDefine,
             }
         }
     },

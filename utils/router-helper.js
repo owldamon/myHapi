@@ -8,4 +8,11 @@ const paginationDefine = {
     pagination: Joi.boolean().description('是否开启分页，默认为true')
 }
 
-module.exports = { paginationDefine }
+const jwtHeaderDefine = {
+    headers: Joi.object({
+        authorization: Joi.string().required()
+    }).unknown()
+}
+
+
+module.exports = { paginationDefine, jwtHeaderDefine }
