@@ -8,11 +8,9 @@ module.exports = [
             reply('hapi');
         },
         config: {
+            auth: false,
             tags: ['api', 'tests'],
-            description: '测试hello-hapi',
-            validate: {
-                ...jwtHeaderDefine
-            }
+            description: '测试hello-hapi'
         }
     }
 ]
