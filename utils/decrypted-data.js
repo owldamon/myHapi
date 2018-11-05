@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const decrypData = (encryptedData, iv, sessionKey, appid) => {
+const decryptData = (encryptedData, iv, sessionKey, appid) => {
     const encryptedDataNew = Buffer.from(encryptedData, 'base64');
     const sessionKeyNew = Buffer.from(sessionKey, 'base64');
     const ivNew = Buffer.from(iv, 'base64');
@@ -22,4 +22,4 @@ const decrypData = (encryptedData, iv, sessionKey, appid) => {
     return decoded;
 }
 
-module.exports = decrypData;
+module.exports = decryptData;

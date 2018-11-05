@@ -8,7 +8,7 @@ module.exports = [
             reply('hapi');
         },
         config: {
-            auth: false,
+            // auth: false,
             tags: ['api', 'tests'],
             description: '测试hello-hapi'
         }
